@@ -3,7 +3,7 @@
  * @Author: wh01am
  * @Contact: wh0197m@gmail.com
  * @Last Modified By: wh01am
- * @Last Modified Time: Apr 14, 2017 3:30 PM
+ * @Last Modified Time: Apr 14, 2017 4:04 PM
  * @Description: jour cli
  */
 
@@ -14,11 +14,11 @@ const arguments = require('minimist')(process.argv.slice(2)); // get cli argumen
 
 function cli(cwd, args) {
     let cwd = cwd || process.cwd();
-
-    function handleError() {
-        log.fatal(err);
-        process.exit(2);
-    }
+    let log =
+        function handleError(err) {
+            log.fatal(err);
+            process.exit(2);
+        }
 
 };
 
