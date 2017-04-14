@@ -1,0 +1,16 @@
+{
+  "name": "jour",
+  "version": "1.0.0",
+  "description": "Record everything i need remember.",
+  "main": "index.js",
+  "repository": "https://github.com/wh0197m/Wh01am-Blog.git",
+  "author": "wh0197m@gmail.com",
+  "license": "MIT",
+  "dependencies": {
+    "chalk": "^1.1.3",
+    "minimist": "^1.2.0",
+    "nconf": "^0.8.4",
+    "pug": "^2.0.0-beta11",
+    "winston": "^2.3.1"
+  }
+}
