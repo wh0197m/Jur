@@ -16,5 +16,8 @@
     "publish": {
         "git_address": "your git repo url",
         "path": "which directory do you want wo publish for static site"
+    },
+    "log": {
+        "name": "jour.log"
     }
 }

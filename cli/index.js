@@ -3,37 +3,47 @@
  * @Author: wh01am
  * @Contact: wh0197m@gmail.com
  * @Last Modified By: wh01am
- * @Last Modified Time: Apr 14, 2017 4:04 PM
+ * @Last Modified Time: Apr 16, 2017 11:12 AM
  * @Description: jour cli
  */
 
-
 const chalk = require('chalk'); // format console output with colors
 const path = require('path');
-const arguments = require('minimist')(process.argv.slice(2)); // get cli arguments
+const meow = require('meow');
+const handle = require('./console');
+const logo = require('./helpers/logo');
 
-function cli(cwd, args) {
-    let cwd = cwd || process.cwd();
-    let log =
-        function handleError(err) {
-            log.fatal(err);
-            process.exit(2);
-        }
+const cli = meow({
+    description: chalk.green(logo),
+    version: '0.0.1',
+    help: `
+          ${chalk.bgBlue('Usage')}
+            ${chalk.cyan('> jour <command>')}
 
-};
+          ${chalk.bgBlue('Commands')}
+            ${chalk.cyan('init')}     : ${chalk.gray('create a new Jour-Blog foler.')}
+            ${chalk.cyan('add')}      : ${chalk.gray('add a new article.')}
+            ${chalk.cyan('preview')}  : ${chalk.gray('server your blog in localhost.')}
+            ${chalk.cyan('publish')}  : ${chalk.gray('publish your site online.')}
 
-cli.console = {
+          ${chalk.bgBlue('Examples')}
+           ${chalk.cyan('> jour init --dir myBlog')}
+                ${chalk.gray(': will create a directory myBlog and initialize it [alias -d]')}
+           ${chalk.cyan('> jour add --name myArticle --category tech')}
+                ${chalk.gray(': will create a new post which belongs tech category and named by myArticle [alias -n -c]')}
+           ${chalk.cyan('> jour preview --port 8876')}
+                ${chalk.gray(': start a server http://localhost:8876 [alias -p]')}
+           ${chalk.cyan('> jour publish')}
+                ${chalk.gray(': publish site online')}
+        `
+}, {
+    alias: {
+        d: 'dir',
+        n: 'name',
+        c: 'category',
+        p: 'port'
+    }
+});
 
-};
-
-cli.version = require('../package.json').version;
-
-function loadModule(path, args) {
-
-};
-
-function watchSignal() {
-
-};
-
+handle(cli.input[0], cli.flags);
 module.exports = cli;
