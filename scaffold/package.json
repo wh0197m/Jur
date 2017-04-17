@@ -1,6 +1,7 @@
 {
     "name": "jour",
     "version": "1.0.0",
+    "initialization": false,
     "description": "Record everything i need remember.",
     "main": "index.js",
     "repository": "https://github.com/wh0197m/Wh01am-Blog.git",

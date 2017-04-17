@@ -3,7 +3,7 @@
  * @Author: wh01am
  * @Contact: wh0197m@gmail.com
  * @Last Modified By: wh01am
- * @Last Modified Time: Apr 17, 2017 7:44 AM
+ * @Last Modified Time: Apr 17, 2017 3:46 PM
  * @Description: init a new blog dir
  */
 const path = require('path');

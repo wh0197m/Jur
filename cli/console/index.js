@@ -3,7 +3,7 @@
  * @Author: wh01am
  * @Contact: wh0197m@gmail.com
  * @Last Modified By: wh01am
- * @Last Modified Time: Apr 16, 2017 11:13 AM
+ * @Last Modified Time: Apr 17, 2017 3:14 PM
  * @Description: cli handler
  */
 const nconf = require('nconf');
@@ -15,7 +15,7 @@ const preview = require('./preview');
 const publish = require('./publish');
 const Logger = require('../helpers/log');
 
-nconf.argv().env().file({ file: path.resolve(__dirname, '../../config/config.json') });
+nconf.argv().env().file({ file: path.resolve(__dirname, '../../config.json') });
 let logName = nconf.get('log').name;
 
 let logger = Logger(logName);

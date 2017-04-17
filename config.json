@@ -1,0 +1,28 @@
+{
+  "default": {
+    "category": "misc",
+    "article_name": "New Article"
+  },
+  "preview": {
+    "server": "127.0.0.1",
+    "port": "8864"
+  },
+  "blog": {
+    "title": "Jour",
+    "copy_right": "Jour",
+    "date_format": "YYYY-MM-DD",
+    "time_format": "HH:mm:ss"
+  },
+  "publish": {
+    "git_address": "your git repo url",
+    "path": "which directory do you want wo publish for static site"
+  },
+  "log": {
+    "name": "jour.log"
+  },
+  "nav": {
+    "misc": 1
+  },
+  "content": {},
+  "initialization": true
+}
