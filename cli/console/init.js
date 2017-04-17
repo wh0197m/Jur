@@ -3,7 +3,7 @@
  * @Author: wh01am
  * @Contact: wh0197m@gmail.com
  * @Last Modified By: wh01am
- * @Last Modified Time: Apr 16, 2017 12:25 PM
+ * @Last Modified Time: Apr 17, 2017 7:44 AM
  * @Description: init a new blog dir
  */
 const path = require('path');
@@ -24,7 +24,7 @@ module.exports = function(blogName) {
     logger.verbose(
         copyFn(SCAFFOLD, target).then(() => {
             process.chdir(target);
-            spawn('npm', ['install']).stdout.on('data', (data) => {
+            spawn('npm', ['install']).stdout.on('data', (data) => { // will install web server
                 logger.info(`${data}`);
                 logger.info('Congratulations! Enjoy your writing.');
             });
