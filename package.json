@@ -11,7 +11,7 @@
         "copy-concurrently": "^1.0.3",
         "meow": "^3.7.0",
         "nconf": "^0.8.4",
-        "pug": "^2.0.0-beta11",
+        "pkg-conf": "^2.0.0",
         "shelljs": "^0.7.7",
         "tildify": "^1.2.0",
         "winston": "^2.3.1"

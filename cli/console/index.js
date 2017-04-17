@@ -3,7 +3,7 @@
  * @Author: wh01am
  * @Contact: wh0197m@gmail.com
  * @Last Modified By: wh01am
- * @Last Modified Time: Apr 17, 2017 3:14 PM
+ * @Last Modified Time: Apr 17, 2017 5:15 PM
  * @Description: cli handler
  */
 const nconf = require('nconf');
@@ -12,7 +12,7 @@ const path = require('path');
 const init = require('./init');
 const add = require('./add');
 const preview = require('./preview');
-const publish = require('./publish');
+const generate = require('./generate');
 const Logger = require('../helpers/log');
 
 nconf.argv().env().file({ file: path.resolve(__dirname, '../../config.json') });
@@ -65,15 +65,15 @@ ${chalk.bgBlue('example')}:
                 )
             }
             break;
-        case 'publish':
+        case 'generate':
             if (len === 0) {
-                publish();
+                generate();
             } else {
                 logger.error(
                     `
-          ${chalk.red('jour publish')} ${chalk.gray('can not accept any arguments')}
+          ${chalk.red('jour generate')} ${chalk.gray('can not accept any arguments')}
 ${chalk.bgBlue('example')}:
-          ${chalk.gray('jour publish')}`
+          ${chalk.gray('jour generate')}`
                 )
             }
             break;

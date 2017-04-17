@@ -19,3 +19,8 @@
    ===========`-.`___`-.__\ \___  /__.-'_.'_.-'================
                            `=--=-'
  */
+
+var pkg = require('pkg-dir');
+pkg(__dirname).then((rootPath) => {
+    console.info(rootPath);
+})
