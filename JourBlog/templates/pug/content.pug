@@ -1,0 +1,12 @@
+doctype html
+html
+  include head.pug
+  body
+    div.main
+      div.container
+        include:markdown-it #{Article}
+      div.nav
+        div.sub
+        div.menu
+    include copyright.pug
+

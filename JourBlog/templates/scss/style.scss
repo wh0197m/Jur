@@ -1,10 +1,32 @@
 @import 'font';
 @import 'color';
 @import 'icon';
-@mixin border-color ($direction) {
-    -webkit-border-#{$direction}: 1;
-    -moz-border-#{$direction}: 1;
-    border-#{$direction}: 1;
+@mixin gradient-line ($direction) {
+    background-repeat: no-repeat;
+    background-position: 0 0, 100% 0;
+    background-image: linear-gradient(to $direction, $startColor, $fontColor, $startColor);
+    background-image: -webkit-linear-gradient(to $direction, $startColor, $fontColor, $startColor);
+    background-image: -moz-linear-gradient(to $direction, $startColor, $fontColor, $startColor);
+    background-image: -o-linear-gradient(to $direction, $startColor, $fontColor, $startColor);
+}
+
+@mixin layout ($direction) {
+    display: -webkit-box;
+    -webkit-box-orient: horizontal;
+    -webkit-box-pack: $direction;
+    -webkit-box-align: $direction;
+    display: -moz-box;
+    -moz-box-orient: horizontal;
+    -moz-box-pack: $direction;
+    -moz-box-align: $direction;
+    display: -ms-box;
+    -ms-box-orient: horizontal;
+    -ms-box-pack: $direction;
+    -ms-box-align: $direction;
+    display: box;
+    box-orient: horizontal;
+    box-pack: $direction;
+    box-align: $direction;
 }
 
 html,
@@ -20,16 +42,46 @@ body {
     width: 100%;
     height: calc(100% - 3.6rem);
     .container {
-        width: 1.68 / 2.68 * 100%;
+        width: 1.618 / 2.618 * 100%;
         height: 100%;
+        float: left;
     }
     .nav {
-        width: 1 / 2.68 * 100%;
-        height: 100%
+        width: 1 / 2.618 * 100%;
+        height: 100%;
+        float: left;
+        right: 0;
+        position: relative;
+        .sub {
+            float: left;
+            width: 61.8%;
+            height: 100%;
+            position: relative;
+            background-size: 1px 100%;
+            @include gradient-line(bottom);
+        }
+        .menu {
+            float: left;
+            width: 0.382 / 2.618 * 100%;
+            height: calc(100% - 3.6rem);
+            right: 0;
+            position: fixed;
+            background-size: 1px 100%;
+            @include gradient-line(bottom);
+        }
     }
 }
 
 .copyright {
     width: 100%;
     height: 3.6rem;
+    position: fixed;
+    background-size: 100% 1px;
+    text-align: center;
+    @include layout(center);
+    @include gradient-line(right);
+    p {
+        padding: 1rem 0;
+        margin: 0;
+    }
 }
