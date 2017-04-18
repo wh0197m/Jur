@@ -25,6 +25,7 @@ function cachePug(articles) {
 
     // inject navigator and articles to nav
 
+
 }
 
 gulp.task('clean', () => {

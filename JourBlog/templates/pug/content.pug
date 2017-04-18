@@ -6,7 +6,11 @@ html
       div.container
         include:markdown-it #{Article}
       div.nav
+      - var Navs = #{Navs}
+      each nav in Navs
         div.sub
+      - var Contents = #{Contents}
+      each content in Contents
         div.menu
     include copyright.pug
 
