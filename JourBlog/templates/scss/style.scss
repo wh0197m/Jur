@@ -59,6 +59,7 @@ body {
             position: relative;
             background-size: 1px 100%;
             @include gradient-line(bottom);
+            @include layout(center)
         }
         .menu {
             float: left;
@@ -68,6 +69,12 @@ body {
             position: fixed;
             background-size: 1px 100%;
             @include gradient-line(bottom);
+            @include layout((center))
+        }
+        ul {
+            li {
+                list-style: none;
+            }
         }
     }
 }

@@ -21,7 +21,8 @@
         "name": "jour.log"
     },
     "nav": {
-        "misc": 1
+        "misc": 1,
+        "test": 2
     },
     "content": [{
             "title": "hello",

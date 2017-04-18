@@ -6,36 +6,46 @@ const sassCompiler = require('gulp-sass');
 const pugCompiler = require('gulp-pug');
 const chalk = require('chalk');
 const replacestream = require('replacestream');
+const replace = require('replace-in-file');
 const config = require('./config.json');
+const rename = require('gulp-rename');
 
 const DEST = 'public';
 
-function cachePug(articles) {
+function cachePug(config) {
     let articles = config.content;
     let navigator = config.nav;
     let len = articles.length;
 
+    let options = {
+        files: './templates/pug/cache.pug',
+        from: ['#{Navigators}', '#{Contents}'],
+        to: [JSON.stringify(navigator), JSON.stringify(articles)],
+        encoding: 'utf8'
+    };
+
+    replace.sync(options);
+
     // inject .md file to content pug
     for (var index = 0; index < len; index++) {
         var article = articles[index];
-        fs.createReadStream(path.join(__dirname, './templates/pug/content.pug'))
+        fs.createReadStream(path.join(__dirname, './templates/pug/cache.pug'))
             .pipe(replacestream('#{Article}', `../articles/${article.category}/${article.link}`))
             .pipe(fs.createWriteStream(`${DEST}/${article.title}.pug`))
     }
-
-    // inject navigator and articles to nav
-
-
 }
 
 gulp.task('clean', () => {
     del(['public/**/*']);
     console.info(`${chalk.green('info ')}:Successfully Clean Old Sites`);
+    return gulp.src('templates/pug/content.pug')
+        .pipe(rename("cache.pug"))
+        .pipe(gulp.dest('templates/pug'))
 })
 
 gulp.task('compile-sass', ['clean'], () => {
     try {
-        cachePug(config.content)
+        cachePug(config);
     } catch (error) {
         console.info(`${chalk.bgRed('error ')}:${error}`);
     }
@@ -56,6 +66,6 @@ gulp.task('compile-pug', ['compile-sass', 'copy-pug'], () => {
 })
 
 gulp.task('default', ['compile-pug', 'copy-pug'], () => {
-    del(['public/**/*.pug']);
+    del(['public/**/*.pug', 'templates/pug/cache.pug']);
     console.info(`${chalk.green('info ')}: Congratulations! You have successfully update your sites.`)
 });

@@ -6,11 +6,17 @@ html
       div.container
         include:markdown-it #{Article}
       div.nav
-      - var Navs = #{Navs}
-      each nav in Navs
         div.sub
-      - var Contents = #{Contents}
-      each content in Contents
+          ul
+            - var lists = #{Contents}
+            each item in lists
+              li
+                a(href=item.link) #{item.title}
         div.menu
+          ul
+            - var Navs = #{Navigators}
+            each nav in Navs
+              li
+                a(id=nav href='javascript:void(0)') #{nav}
     include copyright.pug
 
