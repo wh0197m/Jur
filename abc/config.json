@@ -1,7 +1,7 @@
 {
   "default": {
     "category": "misc",
-    "article_name": "New Article"
+    "article_name": "New"
   },
   "preview": {
     "server": "127.0.0.1",
@@ -21,8 +21,25 @@
     "name": "jour.log"
   },
   "nav": {
-    "misc": 1
+    "misc": 3,
+    "hy": 2
   },
-  "content": {},
+  "content": [
+    {
+      "title": "hello",
+      "link": "hello.md",
+      "category": "misc"
+    },
+    {
+      "title": "world",
+      "link": "world.md",
+      "category": "misc"
+    },
+    {
+      "title": "title",
+      "link": "test.md",
+      "category": "test"
+    }
+  ],
   "initialization": true
 }
