@@ -15,8 +15,8 @@ html
         div.menu
           ul
             - var Navs = #{Navigators}
-            each nav in Navs
+            each value, key in Navs
               li
-                a(id=nav href='javascript:void(0)') #{nav}
+                a(id=key href='javascript:void(0)') #{key}[#{value}]
     include copyright.pug
 
