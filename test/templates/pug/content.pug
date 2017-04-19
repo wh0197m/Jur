@@ -1,0 +1,23 @@
+doctype html
+html
+  include head.pug
+  body
+    div.main
+      div.container
+        div.markdown
+          include:markdown-it #{Article}
+      div.nav
+        div.sub
+          ul
+            - var lists = #{Contents}
+            each item in lists
+              li
+                a(href=item.link) #{item.title}
+        div.menu
+          ul
+            - var Navs = #{Navigators}
+            each value, key in Navs
+              li
+                a(id=key href='javascript:void(0)') #{key}[#{value}]
+    include copyright.pug
+

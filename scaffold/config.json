@@ -21,24 +21,8 @@
         "name": "jour.log"
     },
     "nav": {
-        "misc": 1,
-        "test": 2
+        "misc": 0
     },
-    "content": [{
-            "title": "hello",
-            "link": "hello.md",
-            "category": "misc"
-        },
-        {
-            "title": "world",
-            "link": "world.md",
-            "category": "misc"
-        },
-        {
-            "title": "title",
-            "link": "test.md",
-            "category": "test"
-        }
-    ],
+    "content": [],
     "initialization": true
 }

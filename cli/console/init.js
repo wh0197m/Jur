@@ -3,7 +3,7 @@
  * @Author: wh01am
  * @Contact: wh0197m@gmail.com
  * @Last Modified By: wh01am
- * @Last Modified Time: Apr 17, 2017 3:46 PM
+ * @Last Modified Time: Apr 19, 2017 3:04 PM
  * @Description: init a new blog dir
  */
 const path = require('path');
@@ -26,7 +26,6 @@ module.exports = function(blogName) {
             process.chdir(target);
             spawn('npm', ['install']).stdout.on('data', (data) => { // will install web server
                 logger.info(`${data}`);
-                logger.info('Congratulations! Enjoy your writing.');
             });
         }).catch(err => {
             logger.error(err);

@@ -3,10 +3,9 @@
  * @Author: wh01am
  * @Contact: wh0197m@gmail.com
  * @Last Modified By: wh01am
- * @Last Modified Time: Apr 17, 2017 5:15 PM
+ * @Last Modified Time: Apr 19, 2017 3:27 PM
  * @Description: cli handler
  */
-const nconf = require('nconf');
 const chalk = require('chalk')
 const path = require('path');
 const init = require('./init');
@@ -15,10 +14,7 @@ const preview = require('./preview');
 const generate = require('./generate');
 const Logger = require('../helpers/log');
 
-nconf.argv().env().file({ file: path.resolve(__dirname, '../../config.json') });
-let logName = nconf.get('log').name;
-
-let logger = Logger(logName);
+let logger = Logger('jour.log');
 module.exports = function(subcommand, args) {
     let len = Object.keys(args).length;
     switch (subcommand) {
@@ -37,7 +33,7 @@ ${chalk.bgBlue('example')}:
             break;
         case 'add':
             if (len === 2 || len === 4) {
-                add(args.article, args.category);
+                add(args.name, args.category);
             } else {
                 logger.error(
                     `

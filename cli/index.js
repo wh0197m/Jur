@@ -3,7 +3,7 @@
  * @Author: wh01am
  * @Contact: wh0197m@gmail.com
  * @Last Modified By: wh01am
- * @Last Modified Time: Apr 16, 2017 11:12 AM
+ * @Last Modified Time: Apr 19, 2017 10:50 PM
  * @Description: jour cli
  */
 
@@ -24,7 +24,7 @@ const cli = meow({
             ${chalk.cyan('init')}     : ${chalk.gray('create a new Jour-Blog foler.')}
             ${chalk.cyan('add')}      : ${chalk.gray('add a new article.')}
             ${chalk.cyan('preview')}  : ${chalk.gray('server your blog in localhost.')}
-            ${chalk.cyan('publish')}  : ${chalk.gray('publish your site online.')}
+            ${chalk.cyan('generate')}  : ${chalk.gray('generate your site online.')}
 
           ${chalk.bgBlue('Examples')}
            ${chalk.cyan('> jour init --dir myBlog')}
@@ -33,8 +33,8 @@ const cli = meow({
                 ${chalk.gray(': will create a new post which belongs tech category and named by myArticle [alias -n -c]')}
            ${chalk.cyan('> jour preview --port 8876')}
                 ${chalk.gray(': start a server http://localhost:8876 [alias -p]')}
-           ${chalk.cyan('> jour publish')}
-                ${chalk.gray(': publish site online')}
+           ${chalk.cyan('> jour generate')}
+                ${chalk.gray(': generate site online')}
         `
 }, {
     alias: {

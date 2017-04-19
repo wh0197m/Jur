@@ -3,7 +3,6 @@
 @import 'icon';
 @mixin gradient-line ($direction) {
     background-repeat: no-repeat;
-    background-position: 0 0, 100% 0;
     background-image: linear-gradient(to $direction, $startColor, $fontColor, $startColor);
     background-image: -webkit-linear-gradient(to $direction, $startColor, $fontColor, $startColor);
     background-image: -moz-linear-gradient(to $direction, $startColor, $fontColor, $startColor);
@@ -58,6 +57,7 @@ body {
             height: 100%;
             position: relative;
             background-size: 1px 100%;
+            background-position: 0 0, 100% 0;
             @include gradient-line(bottom);
             @include layout(center)
         }
@@ -68,15 +68,21 @@ body {
             right: 0;
             position: fixed;
             background-size: 1px 100%;
+            background-position: 0 0, 100% 0;
             @include gradient-line(bottom);
             @include layout((center))
         }
         ul {
+            width: 100%;
+            padding: 0;
             li {
                 list-style: none;
                 line-height: 2rem;
-                padding: 0;
+                padding: 0 3.6rem;
                 margin: 0;
+                background-size: 100% 1px;
+                background-position: 0 100%, 100% 0;
+                @include gradient-line(right);
                 a {
                     display: block;
                     color: $lineColor;
@@ -94,6 +100,7 @@ body {
     position: fixed;
     background-size: 100% 1px;
     text-align: center;
+    background-position: 0 0, 100% 0;
     @include layout(center);
     @include gradient-line(right);
     p {

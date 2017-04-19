@@ -30,7 +30,7 @@ function cachePug(config) {
     for (var index = 0; index < len; index++) {
         var article = articles[index];
         fs.createReadStream(path.join(__dirname, './templates/pug/cache.pug'))
-            .pipe(replacestream('#{Article}', `../articles/${article.category}/${article.link}`))
+            .pipe(replacestream('#{Article}', `../articles/${article.category}/${article.title}.md`))
             .pipe(fs.createWriteStream(`${DEST}/${article.title}.pug`))
     }
 }
