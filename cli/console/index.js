@@ -3,7 +3,7 @@
  * @Author: wh01am
  * @Contact: wh0197m@gmail.com
  * @Last Modified By: wh01am
- * @Last Modified Time: Apr 19, 2017 3:27 PM
+ * @Last Modified Time: Apr 20, 2017 11:25 AM
  * @Description: cli handler
  */
 const chalk = require('chalk')
@@ -48,16 +48,14 @@ ${chalk.bgBlue('example')}:
             }
             break;
         case 'preview':
-            if (len === 0 || len === 2) {
-                preview(args.port);
+            if (len === 0) {
+                preview();
             } else {
                 logger.error(
                     `
-          ${chalk.red('jour preview')} ${chalk.gray('just accept 1 argument')}
-          ${chalk.gray('--port (alias -p) means server port you will set')}
+          ${chalk.red('jour preview')} ${chalk.gray('can not accept any arguments')}
 ${chalk.bgBlue('example')}:
-          ${chalk.gray('jour preview')}
-          ${chalk.gray('jour prewview -p 8868')}`
+          ${chalk.gray('jour preview')}`
                 )
             }
             break;
