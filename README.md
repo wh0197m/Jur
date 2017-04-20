@@ -7,13 +7,19 @@
 
 ## Useage
 
-`jour init [ -d BlogDir | --dir BlogDir ]` : *initialize a new blog with specified floder*
+```
+jour init [ -d BlogDir | --dir BlogDir ]
+=> initialize a new blog with specified floder
 
-`jour add [ [-n | --name] articleName ] [ [-c | --category] categoryName ]` : *add a new ariticle with specified name and category*
+jour add [ [-n | --name] articleName ] [ [-c | --category] categoryName ]
+=> add a new ariticle with specified name and category
 
-`jour preview` : *preview your blog in locally host*
+jour preview
+=> preview your blog in locally host
 
-`jour generate` : *generate static site*
+jour generate
+=> generate static site
+```
 
 
 ## Change Log
