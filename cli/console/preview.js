@@ -13,7 +13,6 @@ const spawn = require('child_process').spawn;
 const logger = require('../helpers/log')('preview.log');
 
 module.exports = function() {
-    console.info('what');
     if (fs.existsSync(path.resolve(process.cwd(), 'package.json'))) {
         if (!!pkgConf.sync('status').init) {
             spawn('gulp', ['server']).stdout.on('data', (data) => {

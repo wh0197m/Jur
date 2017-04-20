@@ -4,7 +4,7 @@
  * @Contact: wh0197m@gmail.com
  * @Last Modified By: wh01am
  * @Last Modified Time: Apr 20, 2017 11:18 AM
- * @Description: jour cli
+ * @Description: jur cli
  */
 
 const chalk = require('chalk'); // format console output with colors
@@ -18,22 +18,22 @@ const cli = meow({
     version: '0.0.1',
     help: `
           ${chalk.bgBlue('Usage')}
-            ${chalk.cyan('> jour <command>')}
+            ${chalk.cyan('> jur <command>')}
 
           ${chalk.bgBlue('Commands')}
-            ${chalk.cyan('init')}     : ${chalk.gray('create a new Jour-Blog foler.')}
+            ${chalk.cyan('init')}     : ${chalk.gray('create a new jur-Blog foler.')}
             ${chalk.cyan('add')}      : ${chalk.gray('add a new article.')}
             ${chalk.cyan('preview')}  : ${chalk.gray('server your blog in localhost.')}
             ${chalk.cyan('generate')} : ${chalk.gray('generate your site online.')}
 
           ${chalk.bgBlue('Examples')}
-           ${chalk.cyan('> jour init --dir myBlog')}
+           ${chalk.cyan('> jur init --dir myBlog')}
                 ${chalk.gray(': will create a directory myBlog and initialize it [alias -d]')}
-           ${chalk.cyan('> jour add --name myArticle --category tech')}
+           ${chalk.cyan('> jur add --name myArticle --category tech')}
                 ${chalk.gray(': will create a new post which belongs tech category and named by myArticle [alias -n -c]')}
-           ${chalk.cyan('> jour preview')}
+           ${chalk.cyan('> jur preview')}
                 ${chalk.gray(': start a server http://localhost:8864')}
-           ${chalk.cyan('> jour generate')}
+           ${chalk.cyan('> jur generate')}
                 ${chalk.gray(': generate site online')}
         `
 }, {

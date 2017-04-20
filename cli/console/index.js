@@ -14,7 +14,7 @@ const preview = require('./preview');
 const generate = require('./generate');
 const Logger = require('../helpers/log');
 
-let logger = Logger('jour.log');
+let logger = Logger('jur.log');
 module.exports = function(subcommand, args) {
     let len = Object.keys(args).length;
     switch (subcommand) {
@@ -24,10 +24,10 @@ module.exports = function(subcommand, args) {
             } else {
                 logger.error(
                     `
-          ${chalk.red('jour init')} ${chalk.gray('just accept 1 arguments')}
+          ${chalk.red('jur init')} ${chalk.gray('just accept 1 arguments')}
           ${chalk.gray('--dir (alias -a) means your blog path')}
 ${chalk.bgBlue('example')}:
-          ${chalk.gray('jour init -d test')}`
+          ${chalk.gray('jur init -d test')}`
                 )
             }
             break;
@@ -37,13 +37,13 @@ ${chalk.bgBlue('example')}:
             } else {
                 logger.error(
                     `
-          ${chalk.red('jour add')} ${chalk.gray('just accept 1 or 2 arguments')}
+          ${chalk.red('jur add')} ${chalk.gray('just accept 1 or 2 arguments')}
           ${chalk.gray('--name (alias -n) means your article name')}
           ${chalk.gray('--category (alias -n) means how to classify your new article')})
 ${chalk.bgBlue('example')}:
-          ${chalk.gray('jour add -n test')}
-          ${chalk.gray('jour add -c life')}
-          ${chalk.gray('jour add -n test -c life')}`
+          ${chalk.gray('jur add -n test')}
+          ${chalk.gray('jur add -c life')}
+          ${chalk.gray('jur add -n test -c life')}`
                 )
             }
             break;
@@ -53,9 +53,9 @@ ${chalk.bgBlue('example')}:
             } else {
                 logger.error(
                     `
-          ${chalk.red('jour preview')} ${chalk.gray('can not accept any arguments')}
+          ${chalk.red('jur preview')} ${chalk.gray('can not accept any arguments')}
 ${chalk.bgBlue('example')}:
-          ${chalk.gray('jour preview')}`
+          ${chalk.gray('jur preview')}`
                 )
             }
             break;
@@ -65,15 +65,15 @@ ${chalk.bgBlue('example')}:
             } else {
                 logger.error(
                     `
-          ${chalk.red('jour generate')} ${chalk.gray('can not accept any arguments')}
+          ${chalk.red('jur generate')} ${chalk.gray('can not accept any arguments')}
 ${chalk.bgBlue('example')}:
-          ${chalk.gray('jour generate')}`
+          ${chalk.gray('jur generate')}`
                 )
             }
             break;
         default:
             logger.error(`
-            ${chalk.gray('can not resolve your commands, please check')} ${chalk.red('jour --help')}`);
+            ${chalk.gray('can not resolve your commands, please check')} ${chalk.red('jur --help')}`);
             break;
     }
 }

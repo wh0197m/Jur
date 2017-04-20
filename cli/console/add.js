@@ -23,7 +23,7 @@ module.exports = function(article, category) {
         process.exit(2);
     }
 
-    nconf.env().argv().file('jourConf', path.resolve(process.cwd(), 'config.json'));
+    nconf.env().argv().file('jurConf', path.resolve(process.cwd(), 'config.json'));
 
     let defaultName = nconf.get('default').article_name;
     let defaultCat = nconf.get('default').category;

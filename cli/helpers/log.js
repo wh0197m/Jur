@@ -31,7 +31,7 @@ module.exports = function(fileName) {
         transports: [
             new(winston.transports.Console)({ colorize: true }),
             // new(winston.transports.File)({
-            //     filename: (fileName || 'jour.log')
+            //     filename: (fileName || 'jur.log')
             // })
         ]
     });

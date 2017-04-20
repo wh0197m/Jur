@@ -1,4 +1,4 @@
-# Jour
+# Jur
 > A simple tools for helping you build a static blog
 
 ## Env
@@ -8,16 +8,16 @@
 ## Useage
 
 ```
-jour init [ -d BlogDir | --dir BlogDir ]
+jur init [ -d BlogDir | --dir BlogDir ]
 => initialize a new blog with specified floder
 
-jour add [ [-n | --name] articleName ] [ [-c | --category] categoryName ]
+jur add [ [-n | --name] articleName ] [ [-c | --category] categoryName ]
 => add a new ariticle with specified name and category
 
-jour preview
+jur preview
 => preview your blog in locally host
 
-jour generate
+jur generate
 => generate static site
 ```
 

@@ -1,9 +1,12 @@
 {
-    "name": "jour",
-    "version": "1.0.0",
-    "description": "Record everything i need remember.",
+    "name": "jur",
+    "version": "0.0.1",
+    "description": "A simple tools for helping you build a static blog.",
     "main": "index.js",
-    "repository": "https://github.com/wh0197m/Wh01am-Blog.git",
+    "keywords": [
+        "Blog", "Pug", "Markdown", "Scss"
+    ],
+    "repository": "https://github.com/wh0197m/Jur.git",
     "author": "wh0197m@gmail.com",
     "license": "MIT",
     "dependencies": {

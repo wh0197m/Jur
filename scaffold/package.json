@@ -1,12 +1,12 @@
 {
-    "name": "jour",
+    "name": "jur",
     "version": "1.0.0",
     "status": {
         "init": true
     },
     "description": "Record everything i need remember.",
     "main": "index.js",
-    "repository": "https://github.com/wh0197m/Wh01am-Blog.git",
+    "repository": "https://github.com/wh0197m/Jur.git",
     "author": "wh0197m@gmail.com",
     "license": "MIT",
     "dependencies": {

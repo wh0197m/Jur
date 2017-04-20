@@ -8,8 +8,8 @@
         "port": "8864"
     },
     "blog": {
-        "title": "Jour",
-        "copy_right": "Jour",
+        "title": "Jur",
+        "copy_right": "Jur",
         "date_format": "YYYY-MM-DD",
         "time_format": "HH:mm:ss"
     },
@@ -18,7 +18,7 @@
         "path": "which directory do you want wo publish for static site"
     },
     "log": {
-        "name": "jour.log"
+        "name": "jur.log"
     },
     "nav": {
         "misc": 0

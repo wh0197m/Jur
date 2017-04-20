@@ -17,10 +17,10 @@ const SCAFFOLD = path.join(__dirname, '../../scaffold');
 let logger = Logger('init.log');
 
 module.exports = function(blogName) {
-    let dirName = blogName || 'JourBlog';
+    let dirName = blogName || 'jurBlog';
     let target = path.resolve(process.cwd(), dirName);
 
-    logger.info('Initializing a new jour blog ...');
+    logger.info('Initializing a new jur blog ...');
     logger.verbose(
         copyFn(SCAFFOLD, target).then(() => {
             process.chdir(target);
