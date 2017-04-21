@@ -1,3 +1,4 @@
+[![NPM](https://nodei.co/npm/jur.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/jur/)
 # Jur
 > A simple tools for helping you build a static blog
 
